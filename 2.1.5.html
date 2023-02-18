@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Lightly-HTML-Project</title>
+      <style>
+      body
+        {
+        font-size:75%;
+        font-family:verdana,arial,'sans serif';
+        background-image:url('gradient.png');
+        background-repeat:repeat-x;
+        margin:70px;
+        }
+    
+       h1 {font-size:200%;
+       text-decoration:overline;}
+       h2 {font-size:140%;}
+       h3 {font-size:110%;}
+    
+       th {background-color:#ADD8E6;}
+    
+       ul {list-style:circle;}
+       ol {list-style:upper-roman;}
+    
+       a:link {color:#000080;}
+       a:hover {color:red;}
+       /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+        @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+        @media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+       </style>
+  </head>
+  <body>
+        <h1>检查</h1>
+        <h3>包括非手术治疗与手术治疗</h3>
+        <form action="">
+            <fieldset>
+              <legend>非手术治疗</legend>
+              <p>
+                原则：促进局部炎症、水肿及早消退，并促进神经功能的恢复。
+               （1）对于周围性面神经麻痹，如为病毒感染可用抗病毒、营养神经、糖皮质激素、B族维生素等药物。
+               （2）保护暴露的角膜及预防结膜炎，可用眼罩，滴眼药水、眼药膏等；
+               （3）按摩，用手按摩面瘫面肌，每日数次，每次5～10分钟。
+               （4）物理疗法，常用的有超短波、低中频电疗、激光、药物导入等。
+               （5）针灸治疗。
+              </p>
+            </fieldset>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <form action="">
+                <fieldset>
+                  <legend>手术治疗</legend>
+                  <p>
+                    在保守治疗3个月后面神经炎仍未恢复，测定面神经传导速度及面肌肌电图检查均无反应即无电位活动者，可采用外科手术治疗。
+                  </p>
+                </fieldset>
+            </form>
+  </body>
+</html>

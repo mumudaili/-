@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zn-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>基于云平台的面瘫康复系统</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/script.js"></script>
+    <style>
+    body
+    {
+    font-size:100%;
+    font-family:verdana,arial,'sans serif';
+    background-image:url('');
+    background-repeat:repeat-x;
+    background-color:#F8F8F8;
+    text-align: center;
+    margin:70px;
+
+    }
+    .header {
+  background-color: whitesmoke;
+  padding: 20px;
+  text-align: center;
+}
+
+   h1 {font-size:200%;}
+   h2 {font-size:140%;}
+   h3 {font-size:110%;}
+
+   th {background-color:#ADD8E6;}
+
+   ul {list-style:circle;
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       background-color: #333; 
+       position: fixed;
+       top:0;
+       width: 100%;
+        }
+        li{
+          float: left;
+        }
+       
+        li a{
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        li a:hover:not(.active){
+          background-color: #111;
+        }
+        .active{
+          background-color: #ADD8E6;
+        }
+
+      ol {list-style:upper-roman;}
+
+  
+  
+      .full-background {
+        /* Center the content */
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        /* Take full size */
+        height: 100vh;
+        width: 100%;
+
+        /* Background */
+        background: url("/assets/full-background.jpeg") center center / cover
+          no-repeat;
+      }
+      .split-navigation {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0.5rem 0;
+}
+
+.split-navigation__item {
+    margin-right: 0.25rem;
+
+    /* Demo */
+    width: 10rem;
+}
+
+.split-navigation__item--right {
+    /* Sticks to the right */
+    margin-left: auto;
+    margin-right: 0;
+}
+h1 {text-decoration:overline;}
+.footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color :whitesmoke;
+  width:100%;
+  font-size: 13px;
+  
+}
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+ .wrapper {
+  text-transform: uppercase;
+  background: #ececec;
+  color: #555;
+  cursor: help;
+  font-family: "Gill Sans", Impact, sans-serif;
+  font-size: 20px;
+  margin: 100px 75px 10px 75px;
+  padding: 15px 20px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+}
+
+.wrapper .tooltip {
+  background: #1496bb;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -25px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.wrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #1496bb 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+  
+.wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltip {
+  display: none;
+}
+
+.lte8 .wrapper:hover .tooltip {
+  display: block;
+}
+.button {
+    background-color: #ADD8E6; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.diagonal-section {
+    /* Used to position the diagonal area */
+    position: relative;
+}
+
+.diagonal-section__diagonal {
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Create diagonal sides */
+    transform: skewY(-5deg);
+
+    /* Background color */
+    background-color: #d1d5db;
+
+    /* Displayed under the main content */
+    z-index: -1;
+}
+
+   </style>   
+</head>
+<body>
+  
+  <div class="full-background">
+     <ul class= "split-navigation" >
+     
+      <li class="split-navigation__item"  style="float:right">
+         <a class="active" href="./index.html" style="text-decoration:none ;">首页</a>
+        
+      </li>
+    
+      <li class="split-navigation__item split-navigation__item--right" >
+            <a href="./2.html" style="text-decoration:none ;">症状详情</a>      
+      </li>
+    
+      <li class="split-navigation__item split-navigation__item--right">
+       <a href="./3.html" style="text-decoration:none ;">辅助产品功能介绍</a>
+        
+      </li>
+      <li class= "split-navigation__item split-navigation__item--right">
+        <a href="./4.html" style="text-decoration: none ;
+            ">康复医疗方法</a>
+        
+      </li>
+      <li class="split-navigation__item split-navigation__item--right">
+        <a href="./5.html" style="text-decoration:none ;">知识科普界面</a>
+        
+   
+    </ul>  
+
+     <div style="
+     background-color: #f1f1f1;
+      text-align:center;
+      padding: 40px;
+      font-size: 13px;
+    " >
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br /><br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    
+     <img src ="https://i.328888.xyz/2023/02/08/3Odn3.jpeg"  border="0"  height = "100px"></a>
+    <br />
+    <br />
+    <div class="diagonal-section">
+    <!-- The diagonal area -->
+    <div class="diagonal-section__diagonal"></div>
+    <form action="">
+      <fieldset>
+        <legend>致使用者</legend>
+        <p>
+          亲爱的使用者，您好呀。您可以使用此平台来获取对应康复仪的功能说明，不同面瘫病例了解，康复医疗方法训练，相关知识科普等。
+        </p>
+      </fieldset>
+    </form>
+    </div>
+    <br />
+    <br />
+    </div> 
+    <h2>我们希望让您更为方便准确了解不同面瘫病例。</h2>
+    <iframe src="https://i.328888.xyz/2023/02/18/BhLnx.md.png"（对应图片） name="ifram_a" width="50%"></iframe>
+    <br />
+    <br />
+    <p><a href="./branchtwo/2.html" style="text-decoration:none;" target="ifram_a">点击可查看具体详情</a></p>
+    <h2>我们希望让您更有效快速使用对应康复仪、提高康复效率</h2>
+    <iframe src="https://i.328888.xyz/2023/02/18/BhMck.md.png" name="ifram_a" width="50%"></iframe>
+    <p><a href="./branchthree/3.html" style="text-decoration:none ;" target="ifram_a">点击可查看具体详情</a></p>
+    <h2>我们希望让您能够实时康复，居家康复，激发抗病康复潜力</h2>
+    <iframe src="https://i.328888.xyz/2023/02/18/BhQFv.md.png" name="ifram_a" width="50%"></iframe>
+    <p><a href="./branchfour/4.html" style="text-decoration:none ;" target="ifram_a">点击可查看具体详情</a></p>
+    <h2>我们希望让您在知识的海洋中体会科学的力量，明了面瘫相关解剖结构、穴位等</h2>
+    <iframe src="https://i.328888.xyz/2023/02/18/B5DfQ.md.png" name="ifram_a" width="50%"></iframe>
+    <p><a href="./branchfive/5.html" style="text-decoration:none ;" target="ifram_a">点击可查看具体详情</a></p>
+    <div style = "  
+    max-width:  700px;
+    margin:  30px auto;
+    padding:  20px;
+    line-height:  1.7;
+    ">
+    <form action="">
+      <fieldset>
+        <legend>致使用者</legend>
+        <p>面对疾病，希望您，正确认知，坦然接受，积极生活</p>
+        <p>祝您早日康复！</p>
+      </fieldset>
+    </form>
+      <br />
+      <button class="button">让我们开始使用吧</button>
+    </div>  
+    <div class="wrapper">
+      <p>tip</p>
+      <div class="tooltip">
+      <p>好心情是康复的第一助力~</p>
+      </div>
+     </div >
+   <div class="footer" alien:center>
+     <p>版权所有—基于云平台的面瘫康复系统</p>
+
+   </div>
+   </div>
+   
+</body>
+</html>

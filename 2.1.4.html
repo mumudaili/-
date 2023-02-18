@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Lightly-HTML-Project</title>
+      <style>
+      body
+        {
+        font-size:75%;
+        font-family:verdana,arial,'sans serif';
+        background-image:url('gradient.png');
+        background-repeat:repeat-x;
+        background-color:#F8F8F8;
+        margin:70px;
+        }
+    
+       h1 {font-size:200%;
+       text-decoration:overline;}
+       h2 {font-size:140%;}
+       h3 {font-size:110%;}
+    
+       th {background-color:#ADD8E6;}
+    
+       ul {list-style:circle;}
+       ol {list-style:upper-roman;}
+    
+       a:link {color:#000080;}
+       a:hover {color:red;}
+       /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+        @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+        @media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+       </style>
+  </head>
+  <body>
+            <h1>病因</h1>
+            <h3>引起面神经麻痹的病因有多种，临床上根据损害发生部位可分为中枢性面神经麻痹和周围性面神经麻痹两种。</h3>
+            <form action="">
+            <fieldset>
+              <legend>中枢性面神经麻痹</legend>
+              <p>
+                中枢性面神经麻痹病变位于面神经核以上至大脑皮层之间的皮质延髓束，通常由脑血管病、颅内肿瘤、脑外伤、炎症等引起。
+              </p>
+            </fieldset>
+        </form>
+
+                <br/>
+                <form action="">
+            <fieldset>
+              <legend>中枢性面神经麻痹</legend>
+              <p>
+               周围性面神经炎病损发生于面神经核和面神经。其常见病因为：①感染性病变，多由潜伏在面神经感觉神经节病毒被激活引起；②耳源性疾病，如中耳炎；③自身免疫反应；④肿瘤；⑤神经源性；⑥创伤性；⑦中毒，如酒精中毒，长期接触有毒物；⑧代谢障碍，如糖尿病、维生素缺乏；⑨血管机能不全；⑩先天性面神经核发育不全。
+              </p>
+            </fieldset>
+        </form>
+  </body>
+</html>

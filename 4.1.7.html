@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Lightly-HTML-Project</title>
+  </head>
+        <style>
+        body {
+          font-size: 75%;
+          font-family: verdana, arial, "sans serif";
+          background-image: url("gradient.png");
+          background-repeat: repeat-x;
+          background-color: #F8F8F8 ;
+          margin: 70px;
+        }
+  
+         h1 {
+          font-size: 200%;
+          text-decoration:overline;
+        }
+        h2 {
+          font-size: 140%;
+        }
+        h3 {
+          font-size: 110%;
+        }
+  
+        th {
+          background-color: #add8e6;
+        }
+  
+        ul {
+          list-style: circle;
+        }
+        ol {
+          list-style: upper-roman;
+        }
+  
+        a:link {
+          color: #000080;
+        }
+        a:hover {
+          color: red;
+        }
+        /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+        @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+        @media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+.custom-radio-button {
+    /* Center the content horizontally */
+    align-items: center;
+    display: inline-flex;
+
+    /* Cursor */
+    cursor: pointer;
+}
+
+.custom-radio-button__input {
+    /* Hide it */
+    display: none;
+}
+
+.custom-radio-button__circle {
+    /* Rounded border */
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+
+    /* Spacing */
+    margin-right: 0.5rem;
+    padding: 0.25rem;
+}
+
+.custom-radio-button__radio {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1rem;
+    width: 1rem;
+
+    /* For not selected radio */
+    background-color: transparent;
+}
+
+.custom-radio-button__radio--selected {
+    /* For selected radio */
+    background-color: #ADD8E6;
+}
+      </style>
+  <body>
+     <h1>康复训练视频：吹气</h1>
+     <label class="custom-radio-button">
+    <!-- The real radio -->
+    <input type="radio" class="custom-radio-button__input" />
+
+    <!-- The fake circle -->
+    <div class="custom-radio-button__circle">
+        <!-- The inner circle -->
+        <div class="custom-radio-button__radio custom-radio-button__radio--selected"></div>
+    </div>
+
+    <!-- The text -->
+   <h4>每次做5~10遍，每组做3~5次，每天做5组。</h4>
+</label>
+ </br>
+  <button onclick="playPause()">播放/暂停</button> 
+  <button onclick="makeBig()">放大</button>
+  <button onclick="makeSmall()">缩小</button>
+  <button onclick="makeNormal()">普通</button>
+  <br> 
+  <video id="video1" width="420">
+    <source src="7.吹气.mp4" type="video/mp4">
+      <source src="7.吹气.ogg" type="video/ogg">
+  </video>
+
+
+<script> 
+var myVideo=document.getElementById("video1"); 
+
+function playPause()
+{ 
+	if (myVideo.paused) 
+	  myVideo.play(); 
+	else 
+	  myVideo.pause(); 
+} 
+
+	function makeBig()
+{ 
+	myVideo.width=560; 
+} 
+
+	function makeSmall()
+{ 
+	myVideo.width=320; 
+} 
+
+	function makeNormal()
+{ 
+	myVideo.width=420; 
+} 
+</script>  
+  </body>
+</html>
